@@ -1,3 +1,4 @@
+/*BACKGROUNDS ANIM*/
 Array.from(document.getElementsByClassName('texthover')).forEach(element =>{
 
     element.addEventListener('mouseover', (event) =>{
@@ -51,14 +52,17 @@ function makeInvisible(backgroundName){
     }
 }
 
-
+let leftPosition = [getRandomInt(20), getRandomInt(40), getRandomInt(60),
+    getRandomInt(80), getRandomInt(100)];
+let index = 0;
+/*GENERATE RANDOM POSITIONS AND ZINDEX*/
 Array.from(document.getElementsByClassName('positions')).forEach(element => {
 
-    element.style.left = getRandomInt(80) + "%";
+    element.style.left =  leftPosition[index]+ "%";
+    index++;
     element.style.bottom = getRandomInt(100) + "%";
-
+    element.style.zIndex = getRandomInt(10);
 });
-
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
