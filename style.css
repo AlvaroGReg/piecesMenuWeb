@@ -30,9 +30,8 @@ div {
 }
 
 .square {
-  bottom: 0;
-  height: 25vh;
-  width: 25vh;
+  height: 200px;
+  width: 300px;
   background-color: aquamarine;
   clip-path: inset(5% 20% 15% 10%);
 }
@@ -40,9 +39,7 @@ div {
 .cross {
     height: 200px;
     width: 200px;
-    right: 0;
-    bottom: 0;
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(255, 115, 250);
   clip-path: polygon(
     20% 0%,
     0% 20%,
@@ -60,7 +57,6 @@ div {
 }
 
 .star {
-  right: 0;
   height: 30vh;
   width: 30vh;
 
@@ -92,8 +88,8 @@ div {
 }
 
 .circle {
-  width: 30vh;
-  height: 30vh;
+  width: 150px;
+  height: 150px;
   background-color: chartreuse;
   clip-path: circle(50% at 50% 50%);
 }
@@ -101,6 +97,10 @@ div {
 /*TEXT*/
 p {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.circle>p{
+    text-align: center;
 }
 
 /*IMAGES*/
