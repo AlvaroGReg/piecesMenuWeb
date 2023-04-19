@@ -51,17 +51,15 @@ function makeInvisible(backgroundName){
     }
 }
 
-let position1 = {left: 10, bottom: 65};
-let position2 = {left: 25, bottom: 50};
-let position3 = {left: 40, bottom: 25};
-let position4 = {left: 60, bottom: 65};
-let position5 = {left: 80, bottom: 10};
-let positions = [position1,position2,position3,position4,position5];
-let index = 0;
 
 Array.from(document.getElementsByClassName('positions')).forEach(element => {
-    console.log(element)
-    element.style.left = positions[index].left + "%";
-    element.style.bottom = positions[index].bottom + "%";
-    index++;
+
+    element.style.left = getRandomInt(80) + "%";
+    element.style.bottom = getRandomInt(100) + "%";
+
 });
+
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
