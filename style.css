@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*divs*/
+div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.burst {
+  background-color: blueviolet;
+  width: 30vh;
+  height: 30vh;
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+
+  animation: divMovement 2s;
+}
+
+.square {
+  bottom: 0;
+  height: 25vh;
+  width: 25vh;
+  background-color: aquamarine;
+  clip-path: inset(5% 20% 15% 10%);
+}
+
+.cross {
+    height: 200px;
+    width: 200px;
+    right: 0;
+    bottom: 0;
+  background-color: rgb(255, 0, 0);
+  clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  );
+}
+
+.star {
+  right: 0;
+  height: 30vh;
+  width: 30vh;
+
+  background-color: rgb(255, 251, 0);
+  -webkit-clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.circle {
+  width: 30vh;
+  height: 30vh;
+  background-color: chartreuse;
+  clip-path: circle(50% at 50% 50%);
+}
+
+/*TEXT*/
+p {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+/*IMAGES*/
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  animation: 0.6s;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+}
+
+/*ANIMATIONS*/
+
+div:hover {
+  animation: scaleanim 2s infinite;
+  z-index: 100;
+}
+
+@keyframes scaleanim {
+  0% {
+    scale: 100%;
+  }
+
+  50% {
+    scale: 120%;
+  }
+  100% {
+    scale: 100%;
+  }
+}
+
+@keyframes divMovement {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
